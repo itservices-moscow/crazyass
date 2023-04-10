@@ -1,0 +1,35 @@
+@use "../global/variable.scss" as var;
+
+.input {
+  padding: 16px 16px 16px 16px;
+  font-family: var.$primary-font;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid var.$light-grey;
+  color: var.$nero;
+  border-bottom: 1px solid var.$light-grey;
+  background-color: var.$transparent;
+  transition: 0.3s ease-out;
+
+  &::placeholder {
+    color: var.$nobel;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var.$nero;
+  }
+
+  &:disabled {
+    background-color: var.$white-smoke-2;
+
+    &::placeholder {
+      color: var.$dark-grey;
+    }
+  }
+
+  &.error {
+    border-color: var.$harley-davidson-orange;
+  }
+}

@@ -1,0 +1,132 @@
+@use "../global/variable.scss" as var;
+
+.subscription__title {
+  margin: 0 0 32px 0;
+  font-family: var.$secondary-font;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 56px 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.subscription__list {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+  margin: 0 0 83px 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: var.$tablet-width) {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    gap: 14px;
+    margin: 0 0 95px 0;
+  }
+}
+
+.subscription__item {
+  position: relative;
+  min-height: 347px;
+  padding: 40px 16px 38px 16px;
+  background-color: var.$white-smoke;
+
+  @media (min-width: var.$desktop-width) {
+    min-width: 405px;
+    padding: 48px 40px 46px 40px;
+  }
+}
+
+.subscription__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+
+  @media (min-width: var.$desktop-width) {
+    min-height: 262px;
+  }
+}
+
+.subscription__item-title {
+  margin: 0 0 24px 0;
+  font-family: var.$secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 58px;
+    line-height: 58px;
+  }
+
+  &--design {
+    /* stylelint-disable-next-line */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: var.$transparent;
+    background-image: url("../img/mockup-text-desktop.png");
+    background-position: 5px -5px;
+
+    @media (min-width: var.$desktop-width) {
+      background-position: 0 5px;
+    }
+  }
+}
+
+.subscription__description {
+  max-width: 140px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 250px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.subscription__proposal {
+  margin: auto 0 32px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.subscription__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @media (min-width: var.$desktop-width) {
+    width: 323px;
+    height: 400px;
+  }
+}
+
+.subscription__button {
+  position: absolute;
+  width: calc(100% - 32px);
+  bottom: 37px;
+  padding: 19px 18px 15px 18px;
+  font-size: 14px;
+  z-index: 2;
+
+  @media (min-width: var.$desktop-width) {
+    position: static;
+    max-width: 249px;
+  }
+}

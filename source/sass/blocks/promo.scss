@@ -1,0 +1,119 @@
+@use "../global/variable.scss" as var;
+
+.promo__wrapper {
+  margin: 24px 0 106px 0;
+
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 48px 0 172px 0;
+  }
+
+  picture {
+    @media (min-width: var.$tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+  }
+}
+
+.promo__img {
+  display: block;
+  width: 100%;
+  margin: 0 0 16px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+  }
+}
+
+.promo__title {
+  margin: 0 0 12px 0;
+  font-family: var.$secondary-font;
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @media (min-width: 1040px) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  @media (min-width: 1240px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 58px;
+    line-height: 62px;
+  }
+}
+
+.promo__lead {
+  margin: 0 0 40px 0;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 250px;
+    margin: 0 0 35px 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 445px;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.promo__text-wrapper {
+  z-index: 2;
+
+  @media (min-width: var.$tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 42%;
+    height: 63%;
+    align-self: end;
+    padding: 20px 20px 20px 0;
+    background-color: var.$white;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 570px;
+    height: 441px;
+    padding: 40px 52px 45px 0;
+  }
+}
+
+.promo__button {
+  @media (min-width: var.$tablet-width) {
+    max-width: 410px;
+  }
+}

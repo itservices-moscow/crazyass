@@ -1,0 +1,50 @@
+@use "../global/variable.scss" as var;
+
+.button {
+  display: block;
+  padding: 19px 18px 18px 18px;
+  font-size: 16px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s ease-out;
+
+  &--primary {
+    color: var.$white;
+    border: 1px solid var.$white;
+    background-color: var.$transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var.$nero;
+      background-color: var.$white;
+    }
+  }
+
+  &--accent {
+    color: var.$white;
+    border: 1px solid var.$nero;
+    background-color: var.$nero;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var.$transparent;
+      color: var.$nero;
+    }
+  }
+
+  &--secondary {
+    color: var.$nero;
+    border: 1px solid var.$nero;
+    background-color: var.$white-smoke;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var.$white;
+      background-color: var.$nero;
+    }
+  }
+}
