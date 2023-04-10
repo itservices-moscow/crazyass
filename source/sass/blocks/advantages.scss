@@ -43,7 +43,7 @@
   width: 200%;
   height: 80px;
   background-color: var.$nero;
-  background-image: url("../../img/pattern.png");
+  background-image: url("../img/pattern.png");
   background-repeat: repeat-x;
   z-index: -1;
 
@@ -52,8 +52,10 @@
   }
 
   &--light {
-    background-color: var.$transparent;
-    background-image: linear-gradient(rgba(var.$white-smoke, 0.6) 0%, rgba(var.$white-smoke, 0.6) 100%);
+    background-color: rgba(var.$white-smoke, 0.6);
+    background-image: url("../img/marquee-light.png");
+    background-size: 100% 98%;
+    background-position: 50%;
     z-index: -2;
   }
 
