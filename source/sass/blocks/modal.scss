@@ -46,6 +46,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
 
     width: 100%;
     height: 100%;
@@ -75,6 +76,7 @@
     top: 12px;
     right: 12px;
     padding: 0;
+    color: var.$nero;
     background-color: var.$transparent;
     border: 1px solid var.$nero;
     cursor: pointer;
@@ -83,9 +85,17 @@
     align-items: center;
     width: 36px;
     height: 36px;
+    transition: 0.3s ease;
+
+    &:hover,
+    &:active {
+      background-color: var.$nero;
+      color: var.$white;
+    }
 
     svg {
       display: block;
+      transition: 0.3s ease;
     }
   }
 

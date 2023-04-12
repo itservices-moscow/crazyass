@@ -2,8 +2,12 @@
 
 .main-header {
   background-color: var.$nero;
+  z-index: 4;
+  transition: 1s ease;
 
   @media (max-width: var.$mobile-width-only) {
+    position: sticky;
+    top: 0;
     max-height: 72px;
   }
 
@@ -13,6 +17,10 @@
 
   @media (min-width: var.$desktop-width) {
     padding: 16px 48px 16px 48px;
+  }
+
+  &--hidden {
+    transform: translateY(-100%);
   }
 
   &--opened {

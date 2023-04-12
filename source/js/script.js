@@ -13,6 +13,34 @@ navToggle.addEventListener('click', () => {
   }
 });
 
+/* Header */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const onScrollHeader = () => {
+    const header = document.querySelector('.main-header');
+
+    let prevScroll = window.pageYOffset;
+    let currentScroll;
+
+    window.addEventListener('scroll', () => {
+      currentScroll = window.pageYOffset;
+
+      const headerHidden = () => header.classList.contains('main-header--hidden');
+
+      if (currentScroll > prevScroll && !headerHidden()) {
+        header.classList.add('main-header--hidden');
+      }
+      if (currentScroll < prevScroll && headerHidden()) {
+        header.classList.remove('main-header--hidden');
+      }
+
+      prevScroll = currentScroll;
+    });
+  }
+
+  onScrollHeader();
+});
+
 /* Lookbook slider with destroy */
 
 const lookbookSlider = document.querySelector('.lookbook__slider');
@@ -64,6 +92,7 @@ const sliderReviews = new Swiper('.reviews__slider', {
   autoHeight: true,
   slideToClickedSlide: true,
   spaceBetween: 8,
+  speed: 1000,
   pagination: {
     el: '.reviews__pagination',
     type: 'bullets',
@@ -78,6 +107,26 @@ const sliderReviews = new Swiper('.reviews__slider', {
   }
 });
 
+/* Promo slider */
+
+const sliderPromo = new Swiper('.promo__slider', {
+  loop: true,
+  slidesPerView: 1,
+  autoHeight: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  speed: 1500,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: '.promo__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+});
 
 /* Faq slider with destroy */
 
@@ -543,8 +592,8 @@ const iosChecker = () => {
     'iPhone',
     'iPod'
   ].includes(navigator.platform)
-  // iPad on iOS 13 detection
-  || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+    // iPad on iOS 13 detection
+    || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
 };
 
 const SELECTORS = [
@@ -1107,7 +1156,7 @@ const onPhoneInputInput = (e) => {
   });
 };
 
-const onPhoneInputFocus = ({target}) => {
+const onPhoneInputFocus = ({ target }) => {
   if (!target.value) {
     target.value = baseCountryCode;
   }
@@ -1148,7 +1197,7 @@ const onPhoneInputKeydown = (e) => {
   }
 };
 
-const onPhoneInputBlur = ({target}) => {
+const onPhoneInputBlur = ({ target }) => {
   if (target.value === baseCountryCode) {
     const parent = target.closest('[data-validate-type="phone"]');
     target.value = '';
@@ -1599,16 +1648,16 @@ async function handleFormSubmit(evt) {
     method: 'POST',
     body: formData
   })
-  .then(response => {
-    if (response.ok) {
-      modals.open('modal-success');
-    } else {
-      throw new Error('Form submission failed');
-    }
-  })
-  .catch(error => {
-    throw new Error('Error submitting form:', error);
-  });
+    .then(response => {
+      if (response.ok) {
+        modals.open('modal-success');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    })
+    .catch(error => {
+      throw new Error('Error submitting form:', error);
+    });
 }
 
 function serializeForm(formNode) {

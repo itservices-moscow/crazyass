@@ -71,21 +71,67 @@
   <main class="page-main">
     <section class="promo">
       <div class="container">
-        <div class="promo__wrapper">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/promo-bg-desktop@1x.webp 1x, img/promo-bg-desktop@2x.webp 2x">
-            <source type="image/webp" srcset="img/promo-bg-mobile@1x.webp 1x, img/promo-bg-mobile@1x.webp 2x">
-            <source media="(min-width: 768px)" srcset="img/promo-bg-desktop@1x.png 1x, img/promo-bg-desktop@2x.png 2x">
-            <img class="promo__img" width="327" height="360" src="img/promo-bg-mobile@1x.png"
-              srcset="img/promo-bg-mobile@2x.png 2x" alt="A set with boxers.">
-          </picture>
-          <div class="promo__text-wrapper">
-            <h1 class="promo__title">Monthly boxer short subscription</h1>
-            <p class="promo__lead">Get new premium boxers with a&nbsp;unique design every month just for&nbsp;$ 10,99.
-              Free&nbsp;shipping!</p>
-            <a class="promo__button button button--accent" href="#" data-open-modal="modal-form">Try it now!</a>
+        <div class="promo__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="promo__wrapper swiper-slide">
+              <div class="promo__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/promo-bg-1-desktop@1x.webp 1x, img/promo-bg-1-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/promo-bg-1-mobile@1x.webp 1x, img/promo-bg-1-mobile@1x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/promo-bg-1-desktop@1x.png 1x, img/promo-bg-1-desktop@2x.png 2x">
+                  <img class="promo__img" width="327" height="340" src="img/promo-bg-1-mobile@1x.png"
+                    srcset="img/promo-bg-1-mobile@2x.png 2x" alt="A set with boxers.">
+                </picture>
+              </div>
+              <div class="promo__text-wrapper">
+                <h1 class="promo__title">Monthly boxer short subscription</h1>
+                <p class="promo__lead">Get new premium boxers with a&nbsp;unique design every month just for&nbsp;$&nbsp;10,99.
+                  Free&nbsp;shipping!</p>
+                <a class="promo__button button button--accent" href="#" data-open-modal="modal-form">Try it now!</a>
+              </div>
+            </div>
+            <div class="promo__wrapper swiper-slide">
+              <div class="promo__picture-wrapper promo__picture-wrapper--dark">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/promo-bg-2-desktop@1x.webp 1x, img/promo-bg-2-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/promo-bg-2-mobile@1x.webp 1x, img/promo-bg-2-mobile@1x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/promo-bg-2-desktop@1x.png 1x, img/promo-bg-2-desktop@2x.png 2x">
+                  <img class="promo__img" width="327" height="340" src="img/promo-bg-2-mobile@1x.png"
+                    srcset="img/promo-bg-2-mobile@2x.png 2x" alt="A man in boxers.">
+                </picture>
+              </div>
+              <div class="promo__text-wrapper">
+                <h1 class="promo__title">Line about something new 1</h1>
+                <p class="promo__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt</p>
+                <a class="promo__button button button--accent" href="#" data-open-modal="modal-form">Try it now!</a>
+              </div>
+            </div>
+            <div class="promo__wrapper swiper-slide">
+              <div class="promo__picture-wrapper promo__picture-wrapper--light">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/promo-bg-3-desktop@1x.webp 1x, img/promo-bg-3-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/promo-bg-3-mobile@1x.webp 1x, img/promo-bg-3-mobile@1x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/promo-bg-3-desktop@1x.png 1x, img/promo-bg-3-desktop@2x.png 2x">
+                  <img class="promo__img" width="327" height="340" src="img/promo-bg-3-mobile@1x.png"
+                    srcset="img/promo-bg-3-mobile@2x.png 2x" alt="A man in boxers.">
+                </picture>
+              </div>
+              <div class="promo__text-wrapper">
+                <h1 class="promo__title">Mens’ lifes made easy!</h1>
+                <p class="promo__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt</p>
+                <a class="promo__button button button--accent" href="#" data-open-modal="modal-form">Try it now!</a>
+              </div>
+            </div>
           </div>
+          <div class="promo__pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -137,7 +183,7 @@
             <div class="subscription__wrapper">
               <h3 class="subscription__item-title subscription__item-title--design">Design</h3>
               <p class="subscription__description">Boxers with unique design print</p>
-              <p class="subscription__proposal">$10.99 first month</p>
+              <p class="subscription__proposal">$10.99 free shipping</p>
             </div>
             <a class="subscription__button button button--secondary" href="#" data-open-modal="modal-form">Sign up
               now</a>
@@ -156,7 +202,7 @@
             <div class="subscription__wrapper">
               <h3 class="subscription__item-title">Black</h3>
               <p class="subscription__description">Single color boxers with a&nbsp;branded elastic band</p>
-              <p class="subscription__proposal">$10.99 first month</p>
+              <p class="subscription__proposal">$10.99 free shipping</p>
             </div>
             <a class="subscription__button button button--secondary" href="#" data-open-modal="modal-form">Sign up
               now</a>
