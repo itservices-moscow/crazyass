@@ -53,6 +53,12 @@
   max-height: 340px;
   object-position: right 0 top 50%;
 
+  &--special {
+    @media (max-width: var.$mobile-width-only) {
+      object-fit: cover;
+    }
+  }
+
   @media (min-width: var.$tablet-width) {
     max-height: 374px;
     margin: 0;
