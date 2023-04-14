@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  onScrollHeader();
+  if (document.documentElement.clientWidth < 768) {
+    onScrollHeader();
+  }
 });
 
 /* Lookbook slider with destroy */

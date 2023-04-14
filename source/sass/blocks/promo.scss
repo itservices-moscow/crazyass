@@ -69,15 +69,19 @@
   }
 }
 
+.promo__title-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .promo__title {
   margin: 0 0 12px 0;
   font-family: var.$secondary-font;
   font-size: 36px;
   line-height: 44px;
   text-transform: uppercase;
-  transform: translateY(-100%);
-  transition: transform 0.7s ease, opacity 0.3s ease;
-  overflow: hidden;
+  transform: translateY(100%);
+  transition: transform 1.5s ease, opacity 1s ease;
 
   @media (min-width: var.$tablet-width) {
     margin: 0 0 20px 0;
@@ -104,16 +108,18 @@
 
 .promo__wrapper.swiper-slide-prev {
   .promo__title {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     opacity: 0;
   }
 }
 
 .promo__lead {
+  position: relative;
   margin: 0 0 40px 0;
   font-size: 18px;
   line-height: 24px;
   overflow: hidden;
+  z-index: 3;
 
   @media (min-width: var.$tablet-width) {
     max-width: 250px;
