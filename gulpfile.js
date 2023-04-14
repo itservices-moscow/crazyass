@@ -150,6 +150,7 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copy,
+  copyImages,
   gulp.parallel(
     styles,
     html,
