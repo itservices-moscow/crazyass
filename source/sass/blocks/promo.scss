@@ -11,23 +11,30 @@
 .promo__slider.swiper {
   min-width: 0;
   max-width: 100%;
-  margin: 24px 0 106px 0;
+  margin: 24px 0 0 0;
 
   @media (min-width: var.$tablet-width) {
-    margin: 48px 0 142px 0;
+    margin: 48px 0 0 0;
     padding: 0 0 30px 0;
   }
 }
 
 .promo__picture-wrapper {
-  background-color: var.$lavender;
+  background-image: linear-gradient(180deg, var.$lavender-2 0%, var.$magnolia 13.75%, var.$white-smoke-3 22.73%, var.$white-smoke-3 31.39%, var.$white-smoke-4 52.88%, var.$white-smoke-3 62.26%, var.$magnolia-2 100%);
+
+  @media (min-width: var.$tablet-width) {
+    background-image: none;
+    background-color: var.$lavender;
+  }
 
   &--dark {
     background-color: var.$black-pearl;
+    background-image: none;
   }
 
   &--light {
     background-color: var.$mischka;
+    background-image: none;
   }
 
   @media (min-width: var.$tablet-width) {
@@ -52,12 +59,6 @@
   object-fit: contain;
   max-height: 340px;
   object-position: right 0 top 50%;
-
-  &--special {
-    @media (max-width: var.$mobile-width-only) {
-      object-fit: cover;
-    }
-  }
 
   @media (min-width: var.$tablet-width) {
     max-height: 374px;
@@ -89,11 +90,6 @@
     line-height: 24px;
   }
 
-  @media (min-width: 900px) {
-    font-size: 24px;
-    line-height: 29px;
-  }
-
   @media (min-width: var.$desktop-width) {
     font-size: 58px;
     line-height: 62px;
@@ -123,24 +119,13 @@
 
   @media (min-width: var.$tablet-width) {
     max-width: 250px;
-    margin: 0 0 35px 0;
+    margin: 0 0 25px 0;
     font-size: 14px;
     line-height: 16px;
   }
 
-  @media (min-width: 900px) {
-    margin: 0 0 20px 0;
-    font-size: 16px;
-    line-height: 19px;
-  }
-
   @media (min-width: 1040px) {
     max-width: 420px;
-  }
-
-  @media (min-width: 1100px) {
-    font-size: 18px;
-    line-height: 22px;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -161,6 +146,7 @@
     width: 42%;
     height: 63%;
     align-self: end;
+    margin-bottom: -2px;
     padding: 20px 20px 20px 0;
     background-color: var.$white;
   }
@@ -182,11 +168,13 @@
   position: absolute;
   top: 340px;
   right: 0;
+  max-height: 40px;
 
   @media (min-width: var.$tablet-width) {
     top: 374px;
     width: 258px;
     left: unset;
+    max-height: unset;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -207,5 +195,6 @@
 
   .swiper-pagination-bullet-active {
     background-color: var.$nero;
+    border-color: var.$nero;
   }
 }

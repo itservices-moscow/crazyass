@@ -5,6 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crazy Ass - main page</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/gothampro/gothampro-regular.woff2" type="font/woff2" as="font"
@@ -78,17 +94,18 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)"
                     srcset="img/promo-bg-1-desktop@1x.webp 1x, img/promo-bg-1-desktop@2x.webp 2x">
-                  <source type="image/webp" srcset="img/promo-bg-1-mobile@1x.webp 1x, img/promo-bg-1-mobile@1x.webp 2x">
+                  <source type="image/webp" srcset="img/promo-bg-mobile.webp 1x">
                   <source media="(min-width: 768px)"
                     srcset="img/promo-bg-1-desktop@1x.png 1x, img/promo-bg-1-desktop@2x.png 2x">
-                  <img class="promo__img promo__img--special" width="327" height="340"
-                    src="img/promo-bg-1-mobile@1x.png" srcset="img/promo-bg-1-mobile@2x.png 2x"
+                  <img class="promo__img" width="327" height="340"
+                    src="img/promo-bg-mobile.png"
                     alt="A set with boxers.">
                 </picture>
               </div>
               <div class="promo__text-wrapper">
                 <div class="promo__title-wrapper">
-                  <h1 class="promo__title" data-text="Monthly boxer short subscription">Monthly boxer short subscription</h1>
+                  <h1 class="promo__title" data-text="Monthly boxer short subscription">Monthly boxer short subscription
+                  </h1>
                 </div>
                 <p class="promo__lead">Get new premium boxers with a&nbsp;unique design every month just
                   for&nbsp;$&nbsp;10,99.
@@ -110,10 +127,11 @@
               </div>
               <div class="promo__text-wrapper">
                 <div class="promo__title-wrapper">
-                  <h1 class="promo__title">Line about something new 1</h1>
+                  <h1 class="promo__title">Comfort<br>Quality<br>Style</h1>
                 </div>
-                <p class="promo__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt</p>
+                <p class="promo__lead">Get new premium boxers with a&nbsp;unique design every month just
+                  for&nbsp;$&nbsp;10,99.
+                  Free&nbsp;shipping!</p>
                 <a class="promo__button button button--accent" href="#" data-open-modal="modal-form">Try it now!</a>
               </div>
             </div>
@@ -133,8 +151,9 @@
                 <div class="promo__title-wrapper">
                   <h1 class="promo__title">Mens’ lifes made easy!</h1>
                 </div>
-                <p class="promo__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt</p>
+                <p class="promo__lead">Get new premium boxers with a&nbsp;unique design every month just
+                  for&nbsp;$&nbsp;10,99.
+                  Free&nbsp;shipping!</p>
                 <a class="promo__button button button--accent" href="#" data-open-modal="modal-form">Try it now!</a>
               </div>
             </div>
@@ -192,15 +211,18 @@
     </section>
     <section class="subscription">
       <div class="container">
-        <h2 class="subscription__title">Subscription to&nbsp;boxers</h2>
+        <h2 class="subscription__title">Choose your subscription</h2>
         <ul class="subscription__list">
           <li class="subscription__item">
             <div class="subscription__wrapper">
               <h3 class="subscription__item-title subscription__item-title--design">Design</h3>
               <p class="subscription__description">Boxers with unique design print</p>
-              <p class="subscription__proposal">$10.99 free shipping</p>
+              <p class="subscription__proposal">$10.99
+                <span>free shipping</span>
+              </p>
             </div>
-            <a class="subscription__button button button--secondary" href="#" data-open-modal="modal-form">Try it now</a>
+            <a class="subscription__button button button--accent" href="#" data-open-modal="modal-form">Try it
+              now</a>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
                 srcset="img/subscription-design-desktop@1x.webp 1x, img/subscription-design-desktop@2x.webp 2x">
@@ -216,9 +238,12 @@
             <div class="subscription__wrapper">
               <h3 class="subscription__item-title">Black</h3>
               <p class="subscription__description">Single color boxers with a&nbsp;branded elastic band</p>
-              <p class="subscription__proposal">$10.99 free shipping</p>
+              <p class="subscription__proposal">$10.99
+                <span>free shipping</span>
+              </p>
             </div>
-            <a class="subscription__button button button--secondary" href="#" data-open-modal="modal-form">Try it now</a>
+            <a class="subscription__button button button--accent" href="#" data-open-modal="modal-form">Try it
+              now</a>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
                 srcset="img/subscription-black-desktop@1x.webp 1x, img/subscription-black-desktop@2x.webp 2x">
@@ -263,6 +288,18 @@
               <use xlink:href="img/sprite.svg#icon-fire"></use>
             </svg>
           </div>
+          <div class="advantages__text">
+            <p>anatomical shape</p>
+            <svg class="advantages__icon" width="22" height="36">
+              <use xlink:href="img/sprite.svg#icon-fire"></use>
+            </svg>
+          </div>
+          <div class="advantages__text">
+            <p>anatomical shape</p>
+            <svg class="advantages__icon" width="22" height="36">
+              <use xlink:href="img/sprite.svg#icon-fire"></use>
+            </svg>
+          </div>
         </div>
         <div class="advantages__line advantages__line--light">
           <div class="advantages__text advantages__text--light">
@@ -283,8 +320,32 @@
               <use xlink:href="img/sprite.svg#icon-fire"></use>
             </svg>
           </div>
+          <div class="advantages__text advantages__text--light">
+            <p>breathable material</p>
+            <svg class="advantages__icon" width="22" height="36">
+              <use xlink:href="img/sprite.svg#icon-fire"></use>
+            </svg>
+          </div>
+          <div class="advantages__text advantages__text--light">
+            <p>breathable material</p>
+            <svg class="advantages__icon" width="22" height="36">
+              <use xlink:href="img/sprite.svg#icon-fire"></use>
+            </svg>
+          </div>
         </div>
         <div class="advantages__line">
+          <div class="advantages__text">
+            <p>soft rubber band</p>
+            <svg class="advantages__icon" width="22" height="36">
+              <use xlink:href="img/sprite.svg#icon-fire"></use>
+            </svg>
+          </div>
+          <div class="advantages__text">
+            <p>soft rubber band</p>
+            <svg class="advantages__icon" width="22" height="36">
+              <use xlink:href="img/sprite.svg#icon-fire"></use>
+            </svg>
+          </div>
           <div class="advantages__text">
             <p>soft rubber band</p>
             <svg class="advantages__icon" width="22" height="36">
@@ -432,8 +493,7 @@
                 </div>
               </div>
               <p class="reviews__text">What a great idea with the subscription. There is a waiting effect, when you do
-                not know what print will be next time. Delivery by CDEK is fast. I ordered in Krasnogorsk. The guys
-                from KrasiAss are very good, my questions are answered quickly and to the point. I am satisfied.</p>
+                not know what print will be next time. Delivery by CDEK is fast. I ordered in Krasnogorsk.</p>
             </div>
             <div class="reviews__item swiper-slide">
               <div class="reviews__header">
@@ -529,7 +589,8 @@
       </div>
       <div class="main-footer__copyright-wrapper">
         <p class="main-footer__copyright">© All Rights Reserved.</p>
-        <p class="main-footer__message">Mens' lifes made easy with <img src="img/heart.png" width="16" height="17" alt=""> in Dubai</p>
+        <p class="main-footer__message">Mens' lifes made easy with <img src="img/heart.png" width="16" height="17"
+            alt=""> in Dubai</p>
         <a class="main-footer__mail" href="mailto:hello@crazyass.ru">Hello@crazyass.ru</a>
       </div>
     </div>
@@ -545,21 +606,45 @@
               <div class="modal__form-item" data-validate-type="text" data-message-base="The field must be filled in"
                 data-message-extra="The field should have text format" data-required>
                 <label class="modal__form-label" for="name">Name</label>
-                <input class="modal__form-input input" type="text" id="name" name="name" placeholder="Enter your name"
-                  required>
+                <div class="modal__form-input-wrapper">
+                  <input class="modal__form-input input" type="text" id="name" name="name" placeholder="Enter your name"
+                    required>
+                  <button class="modal__button-reset" type="reset">
+                    <svg class="modal__icon" width="18" height="18">
+                      <use xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                    <span class="visually-hidden">Сбросить значение</span>
+                  </button>
+                </div>
               </div>
               <div class="modal__form-item" data-on-input-validate data-validate-type="phone"
                 data-message-base="The field must be filled in"
                 data-message-extra="The field should have format +7(---)-------" data-required>
                 <label class="modal__form-label" for="phone">Phone</label>
-                <input class="modal__form-input input" type="tel" id="phone" name="phone"
-                  placeholder="Enter your phone number" required>
+                <div class="modal__form-input-wrapper">
+                  <input class="modal__form-input input" type="tel" id="phone" name="phone"
+                    placeholder="Enter your phone number" required>
+                  <button class="modal__button-reset" type="reset">
+                    <svg class="modal__icon" width="18" height="18">
+                      <use xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                    <span class="visually-hidden">Сбросить значение</span>
+                  </button>
+                </div>
               </div>
               <div class="modal__form-item" data-validate-type="email" data-message-base="The field must be filled in"
                 data-message-extra="The field should have email format" data-required>
                 <label class="modal__form-label" for="mail">E-mail</label>
-                <input class="modal__form-input input" type="email" id="mail" name="mail"
-                  placeholder="Enter your E-mail">
+                <div class="modal__form-input-wrapper">
+                  <input class="modal__form-input input" type="email" id="mail" name="mail"
+                    placeholder="Enter your E-mail">
+                  <button class="modal__button-reset" type="reset">
+                    <svg class="modal__icon" width="18" height="18">
+                      <use xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                    <span class="visually-hidden">Сбросить значение</span>
+                  </button>
+                </div>
               </div>
               <button class="modal__button button button--accent" type="submit">Subscribe</button>
               <button class="modal__close-btn" type="button" data-close-modal>

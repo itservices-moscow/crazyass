@@ -13,36 +13,6 @@ navToggle.addEventListener('click', () => {
   }
 });
 
-/* Header */
-
-document.addEventListener('DOMContentLoaded', () => {
-  const onScrollHeader = () => {
-    const header = document.querySelector('.main-header');
-
-    let prevScroll = window.pageYOffset;
-    let currentScroll;
-
-    window.addEventListener('scroll', () => {
-      currentScroll = window.pageYOffset;
-
-      const headerHidden = () => header.classList.contains('main-header--hidden');
-
-      if (currentScroll > prevScroll && !headerHidden()) {
-        header.classList.add('main-header--hidden');
-      }
-      if (currentScroll < prevScroll && headerHidden()) {
-        header.classList.remove('main-header--hidden');
-      }
-
-      prevScroll = currentScroll;
-    });
-  }
-
-  if (document.documentElement.clientWidth < 768) {
-    onScrollHeader();
-  }
-});
-
 /* Lookbook slider with destroy */
 
 const lookbookSlider = document.querySelector('.lookbook__slider');
@@ -89,90 +59,54 @@ initLookbookSlider();
 
 /* Reviews slider */
 
-const sliderReviews = new Swiper('.reviews__slider', {
-  slidesPerView: 'auto',
-  autoHeight: true,
-  slideToClickedSlide: true,
-  spaceBetween: 8,
-  speed: 1000,
-  pagination: {
-    el: '.reviews__pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 16,
+const sliderReviewsElement = document.querySelector('.reviews__slider');
+
+if (sliderReviewsElement) {
+  const sliderReviews = new Swiper('.reviews__slider', {
+    slidesPerView: 'auto',
+    autoHeight: true,
+    slideToClickedSlide: true,
+    spaceBetween: 8,
+    speed: 1000,
+    pagination: {
+      el: '.reviews__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 16,
+      }
     }
-  }
-});
+  });
+}
 
 /* Promo slider */
 
-const sliderPromo = new Swiper('.promo__slider', {
-  loop: true,
-  slidesPerView: 1,
-  autoHeight: true,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  speed: 1500,
-  autoplay: {
-    delay: 5000,
-  },
-  pagination: {
-    el: '.promo__pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-});
+const sliderPromoElement = document.querySelector('.promo__slider');
 
-/* Faq slider with destroy */
-
-const faqSlider = document.querySelector('.faq__links');
-const breakpointTablet = window.matchMedia('(min-width: 768px)');
-
-const initFaqSlider = () => {
-  let sliderFaqInit;
-
-  const getSlider = () => {
-    if (faqSlider) {
-      sliderFaqInit = new Swiper(faqSlider, {
-        slidesPerView: 'auto',
-        slideToClickedSlide: true,
-        spaceBetween: 8,
-      });
-    }
-  }
-
-  const breakpointChecker = () => {
-    let resizeTimeout;
-    if (!resizeTimeout) {
-      resizeTimeout = setTimeout(function () {
-        resizeTimeout = null;
-        resizeHandlerTablet();
-      }, 100);
-    }
-  };
-
-  const resizeHandlerTablet = () => {
-    if (breakpointTablet.matches === true) {
-      if (sliderFaqInit !== undefined) {
-        sliderFaqInit.destroy(true, true);
-      }
-    } else if (breakpointTablet.matches === false) {
-      getSlider();
-    }
-  };
-
-  breakpointTablet.addListener(breakpointChecker);
-  breakpointChecker();
-};
-
-initFaqSlider();
+if (sliderPromoElement) {
+  const sliderPromo = new Swiper('.promo__slider', {
+    loop: true,
+    slidesPerView: 1,
+    autoHeight: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 1500,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: '.promo__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
 
 /* Tabs */
 
@@ -411,6 +345,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
   });
 });
+
 
 /* Accordion */
 
@@ -1241,6 +1176,7 @@ class Validator {
     }
     if (!trigger) {
       parent.classList.add('is-invalid');
+      input.classList.add('error');
       if (parent.hasAttribute('data-message-base') && !input.value) {
         this._message.renderMessage(parent, parent.dataset.messageBase, 'invalid');
       } else if (parent.hasAttribute('data-message-extra') && input.value) {

@@ -2,11 +2,16 @@
 
 .advantages {
   max-width: 100%;
-  padding: 0 0 285px 0;
+  min-height: 690px;
   overflow: hidden;
+  padding: 10px 0 0 0;
+
+  @media (min-width: var.$tablet-width) {
+    min-height: 740px;
+  }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0 0 125px 0;
+    min-height: 790px;
   }
 }
 
@@ -42,6 +47,7 @@
   align-items: center;
   width: 200%;
   height: 80px;
+  margin: 0 -30px;
   background-color: var.$nero;
   background-image: url("../img/pattern.png");
   background-repeat: repeat-x;

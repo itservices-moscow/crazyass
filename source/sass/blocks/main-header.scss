@@ -19,15 +19,11 @@
     padding: 16px 48px 16px 48px;
   }
 
-  &--hidden {
-    transform: translateY(-100%);
-  }
-
   &--opened {
     .main-header__nav {
       @media (max-width: var.$mobile-width-only) {
-        opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
+        transition: transform 1s ease-out;
       }
     }
 
@@ -66,11 +62,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(-150%);
     background-color: var.$nero;
     z-index: 3;
-    transition: 0.3s ease-out;
+    transition: opacity 0.3s ease-out, transform 1s ease-out;
   }
 }
 

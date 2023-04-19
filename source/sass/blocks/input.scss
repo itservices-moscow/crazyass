@@ -17,8 +17,13 @@
 
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &:not(:placeholder-shown) {
     border-color: var.$nero;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:disabled {
