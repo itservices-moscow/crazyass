@@ -13,6 +13,16 @@ navToggle.addEventListener('click', () => {
   }
 });
 
+const mainNavLinkElements = document.querySelectorAll('.main-nav__link');
+
+mainNavLinkElements.forEach((mainNavLink) => {
+  mainNavLink.addEventListener('click', () => {
+    if ((document.documentElement.clientWidth < 768) && (header.classList.contains('main-header--opened'))) {
+      header.classList.remove('main-header--opened');
+    }
+  })
+})
+
 /* Lookbook slider with destroy */
 
 const lookbookSlider = document.querySelector('.lookbook__slider');
