@@ -104,8 +104,7 @@
 }
 
 .main-header__logo-img {
-  min-width: 140px;
-  max-height: 24px;
+  object-fit: contain;
 
   @media (min-width: var.$tablet-width) {
     min-width: 150px;
