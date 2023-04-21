@@ -145,6 +145,13 @@
       }
     }
   }
+
+  .input-message.is-invalid {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    line-height: 13px;
+    color: var.$harley-davidson-orange;
+  }
 }
 
 .modal__form-label {
@@ -195,6 +202,9 @@
   top: 50%;
   right: 15px;
   opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform: translateY(-50%);
   padding: 0;
   background-color: var.$transparent;
@@ -213,4 +223,5 @@
 
 .modal__form-input.error + .modal__button-reset {
   color: var.$harley-davidson-orange;
+  opacity: 1;
 }

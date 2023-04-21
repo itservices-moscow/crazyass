@@ -117,6 +117,12 @@
   &--light {
     color: var.$brilliant-rose;
   }
+
+  &--large-media {
+    @media (max-width: 1920px) {
+      display: none;
+    }
+  }
 }
 
 @keyframes marquee-infinite {
