@@ -113,8 +113,33 @@ if (sliderPromoElement) {
     pagination: {
       el: '.promo__pagination',
       type: 'bullets',
-      clickable: true,
     },
+  });
+  sliderPromo.on('slideChange', function () {
+    const pagination = document.querySelector('.promo__pagination');
+    const bullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+    const bulletActive = pagination.querySelector('.swiper-pagination-bullet-active');
+    for (let i = 0; i < bullets.length; i++) {
+      bullets[i].dataset.id = i;
+    }
+
+    if (bulletActive.dataset.id == 1) {
+      bullets[0].style.backgroundColor = '#1c1c1c';
+      bullets[0].style.borderColor = '#1c1c1c';
+      bullets[1].style.backgroundColor = '#1c1c1c';
+      bullets[1].style.borderColor = '#1c1c1c';
+    }
+    if (bulletActive.dataset.id == 2) {
+      bullets[0].style.backgroundColor = '#1c1c1c';
+      bullets[1].style.backgroundColor = '#1c1c1c';
+      bullets[0].style.borderColor = '#1c1c1c';
+      bullets[1].style.borderColor = '#1c1c1c';
+    }
+
+    if (bulletActive.dataset.id == 0) {
+      bullets[1].style.backgroundColor = 'transparent';
+      bullets[1].style.borderColor = '#d4d4d4';
+    }
   });
 }
 
