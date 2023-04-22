@@ -110,6 +110,8 @@ if (sliderPromoElement) {
     autoplay: {
       delay: 5000,
     },
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
     pagination: {
       el: '.promo__pagination',
       type: 'bullets',
@@ -126,9 +128,8 @@ if (sliderPromoElement) {
     if (bulletActive.dataset.id == 1) {
       bullets[0].style.backgroundColor = '#1c1c1c';
       bullets[0].style.borderColor = '#1c1c1c';
-      bullets[1].style.backgroundColor = '#1c1c1c';
-      bullets[1].style.borderColor = '#1c1c1c';
     }
+
     if (bulletActive.dataset.id == 2) {
       bullets[0].style.backgroundColor = '#1c1c1c';
       bullets[1].style.backgroundColor = '#1c1c1c';
@@ -139,6 +140,8 @@ if (sliderPromoElement) {
     if (bulletActive.dataset.id == 0) {
       bullets[1].style.backgroundColor = 'transparent';
       bullets[1].style.borderColor = '#d4d4d4';
+      bullets[0].style.backgroundColor = 'transparent';
+      bullets[0].style.borderColor = '#d4d4d4';
     }
   });
 }
