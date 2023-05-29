@@ -113,6 +113,13 @@
   }
 }
 
+.faq__link.is-active {
+  @media (min-width: var.$tablet-width) {
+    color: var.$white;
+    background-color: var.$nero;
+  }
+}
+
 .faq__link-icon {
   position: absolute;
   top: 50%;
@@ -161,11 +168,6 @@
 
   .faq__link-icon {
     transform: translateY(-50%) rotate(180deg);
-  }
-
-  @media (min-width: var.$tablet-width) {
-    color: var.$white;
-    background-color: var.$nero;
   }
 }
 
