@@ -985,11 +985,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /* Validation */
 
-
 const baseSuccessCallback = (event) => {
   event.preventDefault();
-  // Нужно убрать, когда будет реализован бэкенд
-  modals.open('modal-success');
+  handleFormSubmit(event);
 };
 
 const baseErrorCallback = (event) => {
@@ -1109,7 +1107,7 @@ const matrixReplace = (item, matrix, RegEx) => {
 const getMailRegEx = () => /[a-zA-Zа-яёА-ЯЁ0-9]{1}([a-zA-Zа-яёА-ЯЁ0-9\-_\.]{1,})?@[a-zA-Zа-яёА-ЯЁ0-9\-]{1}([a-zA-Zа-яёА-ЯЁ0-9.\-]{1,})?[a-zA-Zа-яёА-ЯЁ0-9\-]{1}\.[a-zA-Zа-яёА-ЯЁ]{2,6}/;
 
 const baseCountryCode = '+';
-const baseMatrix = '_(___) ___ __ __';
+const baseMatrix = '___________';
 const phoneLength = baseCountryCode.length + baseMatrix.length;
 
 const onPhoneInputInput = (e) => {
